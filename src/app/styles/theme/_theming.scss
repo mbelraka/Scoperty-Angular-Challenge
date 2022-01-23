@@ -1,0 +1,23 @@
+// General
+@use '@angular/material' as mat;
+
+// Imports
+@import "mat-palettes";
+
+// Theme
+@include mat.core();
+$primary-palette: mat.define-palette($mat-primary-palette, 500);
+$accent-palette: mat.define-palette($mat-accent-palette, 500);
+$warn-palette: mat.define-palette($mat-error-palette, 500);
+$theme: mat.define-light-theme(
+  $primary-palette,
+  $accent-palette,
+  $warn-palette
+);
+@include mat.all-component-themes($theme);
+
+// Fonts
+$typography: mat.define-typography-config(
+  $font-family: Nunito Sans
+);
+@include mat.core($typography);

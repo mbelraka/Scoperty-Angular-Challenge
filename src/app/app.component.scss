@@ -1,0 +1,74 @@
+@import "styles/index";
+
+.full-container {
+  padding: $gutter;
+  width: 100vw;
+  min-height: 100vh;
+  max-height: 100vh;
+  background: $green-3;
+
+  .full-content-container {
+    width: 100%;
+    max-height: 100%;
+    transition: all 0.25s linear;
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+
+    .company-logo {
+      color: $green-1;
+      font-size: 3rem;
+    }
+
+    .content-zone {
+      width: 100%;
+      padding: 24px;
+      z-index: 1;
+    }
+
+    .file-input-container {
+      .file-input {
+        box-shadow: 0 8px 16px 0 rgb(0 0 0 / 8%);
+        background: #fff;
+        z-index: 2;
+
+        .file-input-trigger {
+          width: 101.63px;
+          color: transparent;
+          z-index: 3;
+
+          &::-webkit-file-upload-button {
+            visibility: hidden;
+          }
+
+          &::before {
+            content: "Pick a file";
+            font-family: $font-family;
+            display: inline-block;
+            background: $green-2;
+            color: #fff;
+            border: none;
+            border-radius: $border-radius;
+            padding: 0.5rem 1rem;
+            outline: none;
+            white-space: nowrap;
+            -webkit-user-select: none;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            line-height: 1.5rem;
+          }
+        }
+      }
+    }
+
+    .tree-view {
+      white-space: pre-line;
+      font-weight: 600;
+      font-size: 1rem;
+      color: $black-1;
+      max-height: 36vh;
+      overflow: auto;
+    }
+  }
+}
