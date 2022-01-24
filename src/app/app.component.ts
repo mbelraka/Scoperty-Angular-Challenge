@@ -3,11 +3,13 @@ import { Component, OnInit } from '@angular/core';
 import { MAIN_CONFIG } from 'src/app/config/main.config';
 import { TreeNode } from 'src/app/models/tree-node.model';
 import { Tree } from 'src/app/models/tree.model';
+import { fadeInOutAnimation } from 'src/animations/fade-in-out.animation';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [fadeInOutAnimation]
 })
 export class AppComponent implements OnInit {
   // Private variables
